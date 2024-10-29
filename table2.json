@@ -1,0 +1,54 @@
+[
+    {
+        "NOME": "Edoardo",
+        "COGNOME": "Mansi",
+        "ETA": 18,
+        "INDIRIZZO": "via martide della libertà 5",
+        "CITTA": "barbaiana",
+        "TELEFONO":{
+            "CELLULARE": "3314037653",
+            "CASA": "021973345721",
+            "UFFICIO": "3209661665"
+        }
+        
+    },
+    {
+        "NOME": "Edoardo",
+        "COGNOME": "Mansi",
+        "ETA": 18,
+        "INDIRIZZO": "via martide della libertà 5",
+        "CITTA": "barbaiana",
+        "TELEFONO":{
+            "CELLULARE": "3314037653",
+            "CASA": "021973345721",
+            "UFFICIO": "3209661665"
+        }
+   
+    },
+    {
+        "NOME": "Edoardo",
+        "COGNOME": "Mansi",
+        "ETA": 18,
+        "INDIRIZZO": "via martide della libertà 5",
+        "CITTA": "barbaiana",
+        "TELEFONO":{
+            "CELLULARE": "3314037653",
+            "CASA": "021973345721",
+            "UFFICIO": "3209661665"
+        }
+        
+    },
+    {
+        "NOME": "Edoardo",
+        "COGNOME": "Mansi",
+        "ETA": 18,
+        "INDIRIZZO": "via martide della libertà 5",
+        "CITTA": "barbaiana",
+        "TELEFONO":{
+            "CELLULARE": "3314037653",
+            "CASA": "021973345721",
+            "UFFICIO": "3209661665"
+        }
+        
+    }
+]
