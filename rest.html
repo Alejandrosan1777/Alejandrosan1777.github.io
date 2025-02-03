@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco Post da WordPress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: white;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body background="https://tse2.mm.bing.net/th?id=OIP.dbdjMXeXeids14Gw4FIKkgHaEK&pid=Api&P=0&h=180">
+    <center>
+    <h1>Uso funzione POST</h1>
+    <p>per caricare l'elenco wordpress</p>
+    <div id="posts-container">
+        <p>Caricamento in corso...</p>
+    </div>
+    <div>
+        <table>
+    <script>
+        const apiUrl = 'https://public-api.wordpress.com/rest/v1.1/sites/en.blog.wordpress.com/posts/';
+        async function fetchPosts() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Errore nella richiesta dei dati');
+                }
+                const data = await response.json();
+                displayPosts(data.posts);
+            } catch (error) {
+                console.error('Errore:', error);
+                document.getElementById('posts-container').innerHTML = `Impossibile caricare i post. Riprova più tardi.`;
+            }
+        }
+        function displayPosts(posts) {
+            const container = document.getElementById('posts-container');
+            if (posts.length === 0) {
+                container.innerHTML = `Nessun post trovato`;
+                return;
+            }
+
+            container.innerHTML = ''; 
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+                postElement.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p>${post.excerpt.replace(/<[^>]+>/g, '')}</p>
+                    <a href="${post.URL}" target="_blank">Leggi di più</a>
+                `;
+                container.appendChild(postElement);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', fetchPosts);
+    </script>
+    </table>
+    </div>
+</center>
+</body>
+</html>
